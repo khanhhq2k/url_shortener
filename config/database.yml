@@ -79,6 +79,7 @@ test:
 #
 production:
   <<: *default
+  host: <%= ENV["DB_HOST"] %>
   database: url_shortener_production
   username: url_shortener
   password: <%= ENV["URL_SHORTENER_DATABASE_PASSWORD"] %>
