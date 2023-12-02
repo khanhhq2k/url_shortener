@@ -33,7 +33,7 @@
         "url": "http://149.28.144.40/D73g0"
         }'
       ```
-## 2.  **==To Be Continued==**
+## 2.  **To Be Continued**
 - Implement authorization system for users so they can manage their shortened links, it would be nice if we have also link tracking(clicks,...)
 -  Nice to have:
   + link tracking(clicks,...)
