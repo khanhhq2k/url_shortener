@@ -8,7 +8,11 @@
     - Run `rails db:prepare` - prepare database + migration
     - Run `rails s` - start server in port 3000
 
+  + Deployment tool:
+    - https://kamal-deploy.org/ by Basecamp
+
   - a Dockerfile is generated(from Rails 7.1), it can be used for deployment or dockerized Rails app
+  
   - Demo Url: http://149.28.144.40
 
   + Testing
