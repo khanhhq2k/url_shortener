@@ -28,6 +28,7 @@ env:
     POSTGRES_USER: url_shortener
   secret:
     - RAILS_MASTER_KEY
+    - POSTGRES_PASSWORD
     - URL_SHORTENER_DATABASE_PASSWORD
 
 # Use a different ssh user than root
@@ -61,6 +62,7 @@ accessories:
         POSTGRES_USER: url_shortener
         POSTGRES_DB: url_shortener_production
       secret:
+        - POSTGRES_PASSWORD
         - URL_SHORTENER_DATABASE_PASSWORD
     files:
       # - config/mysql/production.cnf:/etc/mysql/my.cnf
