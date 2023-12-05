@@ -52,6 +52,14 @@ possible characters
 |5|62^5 = 916,132,832|
 |6|62^6 = 56,800,235,584|
 
+## 3. Operation cost
+- Assume there are 10 millions new URLs created everyday
+- Write operation per second: 10_000_000/24/3600 = 116
+- Assume write:read ratio is 1:10, so 116*10 = 1160
+- For N = 5, we have 916,132,832 unique shortened urls, so the application can run for just 91,6 days ~ 3 months!!!
+- We might have to extend N to 6, 7 or even 8 like tinyurl, for N=6 we would have 56.8 biillions urls, which would be enough for 15 years  
+- Storage
+	- Assume average URL length is 100 chars =  100 bytes, a db record is 200 bytes in size, so to run for 15 years, we would need to have 56,8 billions * 200 bytes memory, which equals to 11.36 Terabytes
 ## 3. Performance and real life problems
 - Least recently used(LRU) cache is implemented to store 50 last visited urls, to cut down sql hit
 - Proper index in URL table
