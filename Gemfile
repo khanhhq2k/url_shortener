@@ -48,6 +48,8 @@ group :development, :test do
   gem 'factory_bot', '~> 6.4', '>= 6.4.2'
   gem 'shoulda-matchers', '~> 5.3'
   gem 'database_cleaner', '~> 2.0', '>= 2.0.2'
+  gem 'faker', '~> 3.2', '>= 3.2.2'
+  gem 'factory_bot_rails'
 end
 
 group :development do

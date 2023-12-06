@@ -2,8 +2,9 @@ require 'rails_helper'
 
 describe UrlTask::Decoder, aggregate_failures: true do
   it 'decodes encoded url to original url' do
-    original_url = 'https://github.com/donnemartin/system-design-primer#cache'
-    url = UrlTask::Encoder.new(original_url).call
+    # original_url = 'https://github.com/donnemartin/system-design-primer#cache'
+    url = create(:url) # UrlTask::Encoder.new(original_url).call
+    original_url = url.original_url
     encoded_url = "#{ENV['DOMAIN']}/#{url.hash_value}"
     decoded_url = described_class.new(encoded_url).call
     expect(decoded_url).to eq original_url
@@ -13,7 +14,7 @@ describe UrlTask::Decoder, aggregate_failures: true do
     it 'returns data from cache and stop querying from Url model' do
       original_url = 'https://github.com/donnemartin/system-design-primer#cache'
 
-      url = UrlTask::Encoder.new(original_url).call
+      url = create(:url) # UrlTask::Encoder.new(original_url).call
       encoded_url = "#{ENV['DOMAIN']}/#{url.hash_value}"
       described_class.new(encoded_url).call
 
